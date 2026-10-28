@@ -1,4 +1,4 @@
-name: CI
+name: Test
 
 on:
   push:
@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - "src/**"
-      - ".nvmrc"
       - "package.json"
       - "package-lock.json"
       - "svelte.config.js"
@@ -19,7 +18,6 @@ on:
       - main
     paths:
       - "src/**"
-      - ".nvmrc"
       - "package.json"
       - "package-lock.json"
       - "svelte.config.js"
