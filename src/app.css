@@ -1,0 +1,145 @@
+:root {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: #0f172a;
+  background: #f8f9fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  min-height: 0;
+}
+
+#sidebar {
+  z-index: 1000;
+  box-sizing: border-box;
+  width: 360px;
+  flex: 0 0 360px;
+  padding: 20px;
+  overflow-y: auto;
+  background: #f8f9fa;
+  border-right: 1px solid #ddd;
+}
+
+#sidebar h2 {
+  margin: 0 0 8px;
+}
+
+#map {
+  height: 100%;
+  min-width: 0;
+  flex: 1;
+}
+
+.subtitle {
+  margin: 0 0 20px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+input,
+button {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#changeset-limit-help {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+button {
+  color: white;
+  background: #0284c7;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #0369a1;
+}
+
+button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.stat-card {
+  margin-top: 12px;
+  padding: 12px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.stat-title {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  margin-top: 4px;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+#status {
+  margin-top: 10px;
+  color: #475569;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .app-container {
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+    flex: none;
+    border-right: 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #map {
+    min-height: 50vh;
+    flex: 1;
+  }
+}
