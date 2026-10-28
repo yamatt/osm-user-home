@@ -4,6 +4,15 @@ on:
   push:
     branches:
       - main # Change to 'master' if your default branch is named master
+    paths:
+      - "src/**"
+      - ".nvmrc"
+      - "package.json"
+      - "package-lock.json"
+      - "svelte.config.js"
+      - "index.html"
+      - "vite.config.js"
+      - ".github/workflows/publish.yml"
 
 permissions:
   contents: read
